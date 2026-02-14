@@ -280,7 +280,7 @@ export default function PokemonMemory() {
     const vw = window.innerWidth;
 
     const isMobile = vw < 768;
-    const headerHeight = isMobile ? 150 : 170;
+    const headerHeight = isMobile ? 180 : 200; // Mehr Platz für Margin unten
     const availableHeight = vh - headerHeight;
     const availableWidth = vw - (isMobile ? 20 : 40);
 
@@ -610,7 +610,7 @@ export default function PokemonMemory() {
           </div>
         </div>
 
-        <div className="flex-1 flex items-center justify-center overflow-hidden" style={{ marginBottom: '20px' }}>
+        <div className="flex-1 flex items-center justify-center overflow-hidden pb-6" style={{ marginBottom: '30px' }}>
           <div className={`grid ${gridConfig[difficulty].className} gap-2 justify-center items-center`}>
             {cards.map((card) => (
               <Card key={card.id} card={card} onClick={handleCardClick} disabled={isProcessing} cardSize={cardSize} />
